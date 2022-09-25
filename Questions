@@ -1,5 +1,8 @@
 1)why are default methods used in interface?
 
-The interface that  have already implemented many methods then if we add a new method to the interface all existing implementations are broken. By adding a new method with a default implementation you remaining source-compatible with existing implementations.This provides the backwards compatibility.
+The interface that  have already implemented many methods then if we add a new method to the interface all existing implementations are broken. 
+By adding a new method with a default implementation you remaining source-compatible with existing implementations.
+This provides the backwards compatibility.
 
 2)can we use super keyword for the interface?
+super keyword use to inherit the default method properities from the implemented interface.
