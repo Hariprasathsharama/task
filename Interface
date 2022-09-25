@@ -1,0 +1,27 @@
+//1)If you implemented to interfaces wwith the same default method,which one will get executed?
+//Interface1.super.show();=when there is a implementation class which is inheriting the same default method,we must force 
+// to override the method,we can resolve that ambuigty by explicit stating of the class name. 
+// 2)Use of super keyword in interface?
+// super.show()=It's use to reuse the defualt implementation
+
+interface Interface1 {
+    default public  void show(){
+         System.out.print("Im interface 1");
+     }
+ }
+interface Interface2 {
+    default public  void show(){
+        System.out.print("Im interface 2");
+    }
+}
+
+public class Main implements Interface1,Interface2{
+
+    public void show(){
+        // Interface1.super.show();
+    }
+    public static void main(String[] args) {
+        Main obj=new Main();
+            obj.show();
+    }
+}
