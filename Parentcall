@@ -1,0 +1,23 @@
+//1)One of the way to access child class from class
+
+
+class Parent{
+    
+   static void prints(){
+          Child obj=new Child();//create the child object and assign into child reference.
+          Parent obj2=(Parent)obj;//Type casting the child reference to parent reference.
+          obj2.println();
+       } 
+      void println(){};
+      
+      
+}
+class Child extends Parent{
+    
+     void println(){
+        System.out.println("Im from the child class");
+    }
+    public static void main(String[] args) {
+        prints();       
+   }
+}
